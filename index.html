@@ -11,32 +11,32 @@
       <h1>Register</h1>
       <form>
         <!-- create textbox and label for first and last name with validation and placeholder -->
-        <label for="first_name">First Name</label>
-        <input type="text" name="first_name" id="txtFirstName" placeholder="John" required>
+        <label for="firstName">First Name</label>
+        <input type="text" name="txtFirstName" id="firstName" placeholder="John" required>
 
-        <label for="last_name">Last Name</label>
-        <input type="text" name="last_name" id="txtLastName" placeholder="Smith" required><br>
+        <label for="lastName">Last Name</label>
+        <input type="text" name="txtLastName" id="lastName" placeholder="Smith" required><br>
 
         <!-- add form inputs for gender, incl. other -->
-        <label for="rdoMale">Male</label>
-        <input type="radio" name="gender" id="rdoMale" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="rdoGender" id="male" value="male">
 
-        <label for="rdoFemale">Female</label>
-        <input type="radio" name="gender" id="rdoFemale" value="female">
+        <label for="female">Female</label>
+        <input type="radio" name="rdoGender" id="female" value="female">
 
-        <label for="rdoOther">Other</label>
-        <input type="radio" name="gender" id="rdoOther" value="other"><br>
+        <label for="other">Other</label>
+        <input type="radio" name="rdoGender" id="other" value="other"><br>
 
         <!-- add form inputs for email and password -->
-        <label for="txtEmail">Email</label>
-        <input type="email" name="email" id="txtEmail" placeholder="your email" required>
+        <label for="email">Email</label>
+        <input type="email" name="txtEmail" id="email" placeholder="your email" required>
 
-        <label for="txtPassword">Password</label>
-        <input type="password" name="password" id="txtPassword" placeholder="your password" required><br>
+        <label for="password">Password</label>
+        <input type="password" name="txtPassword" id="password" placeholder="your password" required minlength="5" maxlength="10"><br>
 
         <!-- add form inputs to capture user birthday -->
-        <label for="txtBirthday">Birthday: </label>
-        <select name="month" id="txtBirthday">
+        <label>Birthday: </label>
+        <select name="txtMonth" id="month">
           <option value="">Month</option>
           <option value="jan">January</option>
           <option value="feb">February</option>
@@ -52,7 +52,7 @@
           <option value="dec">December</option>
         </select>
 
-        <select name="day" id="txtBirthday">
+        <select name="txtDay" id="day">
           <option value="">Day</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -87,7 +87,7 @@
           <option value="31">31</option>
         </select>
 
-        <select name="year" id="">
+        <select name="txtYear" id="year">
           <option value="">Year</option>
           <option value="2000">2000</option>
           <option value="2001">2001</option>
@@ -99,10 +99,14 @@
           <option value="2008">2008</option>
           <option value="2009">2009</option>
           <option value="2010">2010</option>
-        </select>
+        </select><br>
+
+        <!-- add a checkbox for terms and condition agreement -->
+        <label for="termsConditions">I agree to the terms and conditions </label>
+        <input type="checkbox" name="chkTermsConditions" id="termsConditions"><br>
 
         <!-- add a button to submit user inputs -->
-        <input type="submit" value="Submit">
+        <input type="submit">
       </form>
   </main>
 </body>
